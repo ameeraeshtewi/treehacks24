@@ -7,6 +7,7 @@
 
 
 import SwiftUI
+import FirebaseFirestore
 
 struct Listitem: Identifiable {
     let id = UUID()
@@ -15,9 +16,32 @@ struct Listitem: Identifiable {
 
 class ListModel: ObservableObject {
     @Published var items: [Listitem] = []
+    var username: String
+    let db = Firestore.firestore()
+    
+    init(username: String) {
+        self.username = username
+    }
     
     func addItem(title: String) {
-        items.append(Listitem(title: title))
+        let newItem = Listitem(title: title)
+        items.append(newItem)
+        print(username)
+        
+        let titlesArray = items.map { $0.title }
+
+        // Reference the document for this user in the "users" collection
+        let userDocument = db.collection("users").document(username)
+
+        // Update the document with the new array of item titles
+        userDocument.setData(["groceryList": titlesArray], merge: true) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated with new item")
+            }
+        }
+        
     }
     
     func deleteItem(at indexSet: IndexSet) {
@@ -28,8 +52,14 @@ class ListModel: ObservableObject {
 
 
 struct groceryList: View {
-    @StateObject var listModel = ListModel()
+    @StateObject var listModel: ListModel
     @State private var newItemTitle = ""
+    var username: String
+    
+    init(username: String) {
+        self.username = username
+        _listModel = StateObject(wrappedValue: ListModel(username: username))
+    }
     
     var body: some View {
         VStack {
@@ -108,6 +138,6 @@ struct groceryList: View {
 
 struct ListMakerView_Previews: PreviewProvider {
     static var previews: some View {
-        groceryList()
+        groceryList(username: "PreviewUsername")
     }
 }

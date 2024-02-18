@@ -24,7 +24,7 @@ struct LogInForm: View {
                             .padding()
                         InputFieldView(data: $password, title: "Password")
                             .padding()
-                        NavigationLink(destination: TabViewExample()){
+                        NavigationLink(destination: TabViewExample(username: username)){
                             Text("Log In")
                                 .padding()
                         }
