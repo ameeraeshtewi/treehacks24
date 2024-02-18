@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        VStack(content: {
+            Text("Name of App")
+            NavigationView {
+                VStack{
+                    NavigationLink(destination: SignUpForm()){
+                        Text("Create a Profile")
+                    }
+                    NavigationLink(destination: LogInForm()){
+                        Text("Log In")
+                    }
+                }
+                
+            }
+            
+        })
     }
 }
 

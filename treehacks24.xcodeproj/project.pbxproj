@@ -11,6 +11,10 @@
 		83A488812B815FB4004D6678 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A488802B815FB4004D6678 /* ContentView.swift */; };
 		83A488832B815FB6004D6678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A488822B815FB6004D6678 /* Assets.xcassets */; };
 		83A488862B815FB6004D6678 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A488852B815FB6004D6678 /* Preview Assets.xcassets */; };
+		C0D96F5C2B816CE5002F0105 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F5B2B816CE5002F0105 /* SignUpForm.swift */; };
+		C0D96F5E2B816D28002F0105 /* LogInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F5D2B816D28002F0105 /* LogInForm.swift */; };
+		C0D96F602B816E26002F0105 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F5F2B816E26002F0105 /* InputFieldView.swift */; };
+		C0D96F622B8179CE002F0105 /* groceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F612B8179CE002F0105 /* groceryList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		83A488802B815FB4004D6678 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		83A488822B815FB6004D6678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83A488852B815FB6004D6678 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C0D96F5B2B816CE5002F0105 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
+		C0D96F5D2B816D28002F0105 /* LogInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInForm.swift; sourceTree = "<group>"; };
+		C0D96F5F2B816E26002F0105 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		C0D96F612B8179CE002F0105 /* groceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groceryList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				83A4887E2B815FB4004D6678 /* treehacks24App.swift */,
 				83A488802B815FB4004D6678 /* ContentView.swift */,
+				C0D96F5B2B816CE5002F0105 /* SignUpForm.swift */,
+				C0D96F5D2B816D28002F0105 /* LogInForm.swift */,
+				C0D96F5F2B816E26002F0105 /* InputFieldView.swift */,
+				C0D96F612B8179CE002F0105 /* groceryList.swift */,
 				83A488822B815FB6004D6678 /* Assets.xcassets */,
 				83A488842B815FB6004D6678 /* Preview Content */,
 			);
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A488812B815FB4004D6678 /* ContentView.swift in Sources */,
+				C0D96F5E2B816D28002F0105 /* LogInForm.swift in Sources */,
+				C0D96F602B816E26002F0105 /* InputFieldView.swift in Sources */,
+				C0D96F5C2B816CE5002F0105 /* SignUpForm.swift in Sources */,
 				83A4887F2B815FB4004D6678 /* treehacks24App.swift in Sources */,
+				C0D96F622B8179CE002F0105 /* groceryList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
