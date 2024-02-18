@@ -41,6 +41,8 @@ struct LogInForm: View {
     }
 }
 
-#Preview {
-    LogInForm()
+struct LogIn_Previews: PreviewProvider {
+    static var previews: some View {
+        LogInForm()
+    }
 }

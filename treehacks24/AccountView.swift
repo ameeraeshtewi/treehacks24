@@ -330,7 +330,3 @@ struct AccountView_Previews: PreviewProvider {
         AccountView()
     }
 }
-
-#Preview {
-    AccountView()
-}
