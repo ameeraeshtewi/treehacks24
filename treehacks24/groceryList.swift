@@ -7,55 +7,78 @@
 
 import SwiftUI
 
-struct groceryList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
-        Spacer()
-        // nav bar
-        NavigationView{
-            HStack{
-                    VStack{
-                        Image("list")
-                        NavigationLink(destination: browseTrips()){
-                            Text("Browse Trips")
-                        }
-                    }
-                    VStack{
-                        Image("map")
-//                        NavigationLink(destination: browseTrips()){
-//                            Text("Browse Trips")
-//                        }
-                    }
-                    VStack{
-                        Image("receipt")
-                        NavigationLink(destination: activity()){
-                            Text("Activity")
-                        }
+struct Listitem: Identifiable {
+    let id = UUID()
+    var title: String
+}
 
-                    }
-                    VStack{
-                        Image("profile")
-                        NavigationLink(destination: AccountView()){
-                            Text("Profile")
-                        }
-                    }
-                }
-//                NavigationLink(destination: browseTrips()){
-//                    Text("Browse Trips")
-//                }
-//                NavigationLink(destination: activity()){
-//                    Text("Activity")
-//                }
-               
-            }
-            .background(Color(red: 0.2980392156862745, green: 0.33725490196078434, blue: 0.2235294117647059))
-            .accentColor(Color(red: 1, green: 0.9725490196078431, blue: 0.9098039215686274))
-        }
-
+class ListModel: ObservableObject {
+    @Published var items: [Listitem] = []
+    
+    func addItem(title: String) {
+        items.append(Listitem(title: title))
+    }
+    
+    func deleteItem(at indexSet: IndexSet) {
+        items.remove(atOffsets: indexSet)
     }
 }
 
-#Preview {
-    groceryList()
+
+
+struct groceryList: View {
+    @StateObject var listModel = ListModel()
+    @State private var newItemTitle = ""
+    
+    var body: some View {
+        VStack {
+            List {
+                ForEach(listModel.items) { item in
+                    Text(item.title)
+                }
+                .onDelete(perform: deleteItem)
+            }
+            .frame(height:500)
+            HStack {
+                TextField("Enter new item", text: $newItemTitle)
+                Button(action: addItem) {
+                    Text("Add")
+                }
+            }
+            HStack{
+                Button(action: startTrip ){
+                    Text("Start a trip")
+                }
+                Button(action: joinTrip) {
+                    Text("Join a Trip")
+                }
+                .padding()            }
+            Spacer()
+        }
+        .padding()
+    }
+    // connect with activity page
+    func startTrip(){
+        
+    }
+    func joinTrip(){
+        
+    }
+    func addItem() {
+           guard !newItemTitle.isEmpty else { return }
+           listModel.addItem(title: newItemTitle)
+           newItemTitle = ""
+       }
+       
+   func deleteItem(at offsets: IndexSet) {
+       listModel.deleteItem(at: offsets)
+   }
+}
+
+
+
+struct ListMakerView_Previews: PreviewProvider {
+    static var previews: some View {
+        groceryList()
+    }
 }

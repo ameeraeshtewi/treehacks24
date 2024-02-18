@@ -11,13 +11,13 @@ struct LogInForm: View {
     @State var username: String = ""
     @State var password: String = ""
     var body: some View {
-        NavigationStack{
+        NavigationView{
             VStack{
                 InputFieldView(data: $username, title: "Username")
                 InputFieldView(data: $password, title: "Password")
-            }
-            NavigationLink(destination: groceryList()){
-                Text("Log In")
+                NavigationLink(destination: TabViewExample()){
+                    Text("Log In")
+                }
             }
         }
         

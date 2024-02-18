@@ -15,6 +15,7 @@
 		C0D96F5E2B816D28002F0105 /* LogInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F5D2B816D28002F0105 /* LogInForm.swift */; };
 		C0D96F602B816E26002F0105 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F5F2B816E26002F0105 /* InputFieldView.swift */; };
 		C0D96F622B8179CE002F0105 /* groceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F612B8179CE002F0105 /* groceryList.swift */; };
+		C0D96F662B81884D002F0105 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D96F652B81884D002F0105 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C0D96F5D2B816D28002F0105 /* LogInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInForm.swift; sourceTree = "<group>"; };
 		C0D96F5F2B816E26002F0105 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		C0D96F612B8179CE002F0105 /* groceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groceryList.swift; sourceTree = "<group>"; };
+		C0D96F652B81884D002F0105 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C0D96F5D2B816D28002F0105 /* LogInForm.swift */,
 				C0D96F5F2B816E26002F0105 /* InputFieldView.swift */,
 				C0D96F612B8179CE002F0105 /* groceryList.swift */,
+				C0D96F652B81884D002F0105 /* TabView.swift */,
 				83A488822B815FB6004D6678 /* Assets.xcassets */,
 				83A488842B815FB6004D6678 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 				C0D96F5E2B816D28002F0105 /* LogInForm.swift in Sources */,
 				C0D96F602B816E26002F0105 /* InputFieldView.swift in Sources */,
 				C0D96F5C2B816CE5002F0105 /* SignUpForm.swift in Sources */,
+				C0D96F662B81884D002F0105 /* TabView.swift in Sources */,
 				83A4887F2B815FB4004D6678 /* treehacks24App.swift in Sources */,
 				C0D96F622B8179CE002F0105 /* groceryList.swift in Sources */,
 			);
