@@ -26,7 +26,7 @@ struct activity: View {
                     Text("32 trips started in the last month")
                         .foregroundColor(Color(red: 1, green: 0.9725490196078431, blue: 0.9098039215686274))
                         .font(.system(size: 20, weight: .bold))
-                        .padding(.top, 20)
+                        .padding(.top, 15)
                         .multilineTextAlignment(.leading)
                     
                     VStack(alignment: .leading){
@@ -34,15 +34,19 @@ struct activity: View {
                             .foregroundColor(Color(.white))
                             .font(.system(size: 20, weight: .bold))
                             .padding()
+                            .padding(.top, 20)
+                            .padding(.bottom, -20)
                         Grid{
                             GridRow{
-                                //                                Text("order name")
-                                //                                    .background(RoundedRectangle(cornerRadius: 25))
-                                //                                Color(.red)
                                 RoundedRectangle(cornerRadius: 15)
                                     .foregroundColor(Color(red: 1, green: 0.9725490196078431, blue: 0.9098039215686274))
-                                    .frame(width: 320, height: 100, alignment: .center)
+                                    .frame(width: 300, height: 100, alignment: .center)
                                     .padding(.bottom, 20)
+                                    .padding(.leading)
+                                    .padding(.trailing)
+                                    .padding(.top)
+                                    .overlay(overlayView)
+                                
                             }
                             GridRow{
                                 //                                Text("past")
@@ -56,12 +60,17 @@ struct activity: View {
                                 .foregroundColor(Color(.white))
                                 .font(.system(size: 20, weight: .bold))
                                 .padding()
+                                .padding(.bottom, -20)
+
                             Grid{
                                 GridRow{
                                     RoundedRectangle(cornerRadius: 15)
                                         .foregroundColor(Color(red: 1, green: 0.9725490196078431, blue: 0.9098039215686274))
-                                        .frame(width: 320, height: 100, alignment: .center)
-                                        .padding(.bottom, 10)
+                                        .frame(width: 300, height: 100, alignment: .center)
+                                        .padding(.bottom, 20)
+                                        .padding(.leading)
+                                        .padding(.trailing)
+                                        .padding(.top)
                                 }
                             }
                             
@@ -81,7 +90,21 @@ struct activity: View {
         }
     }
 }
-
+@ViewBuilder
+private var overlayView: some View {
+    VStack(alignment: .leading){
+        Text("Started trip to Whole Foods")
+            .padding(.trailing, 40)
+            .padding(.bottom, 10)
+            .foregroundColor(.black)
+            .font(.system(size:18, weight: .bold))
+        Text("Purchased: ")
+            .padding(.trailing, 40)
+            .padding(.bottom, 10)
+            .foregroundColor(.black)
+            .font(.system(size:15))
+    }
+}
 #Preview {
     activity()
 }
