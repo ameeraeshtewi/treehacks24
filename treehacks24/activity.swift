@@ -183,6 +183,8 @@ struct activity: View {
     }
 }
 
-#Preview {
-    activity()
+struct activity_Previews: PreviewProvider {
+    static var previews: some View {
+        activity()
+    }
 }

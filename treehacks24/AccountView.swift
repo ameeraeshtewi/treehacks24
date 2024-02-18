@@ -302,15 +302,15 @@ struct AccountView: View {
                             .foregroundColor(.white)
                     }.padding(.leading, -10)
                     
-                    HStack {
-                        Text("Badges:")
-                            .font(.system(size: 25)) // Adjusted font size to 20
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(.leading, 40)
-                            .padding(.top, 10)
-                        Spacer() // This will push the text to the left
-                    }
+//                    HStack {
+//                        Text("Badges:")
+//                            .font(.system(size: 25)) // Adjusted font size to 20
+//                            .fontWeight(.bold)
+//                            .foregroundColor(.white)
+//                            .padding(.leading, 40)
+//                            .padding(.top, 10)
+//                        Spacer() // This will push the text to the left
+//                    }
                     
                     Spacer()
                 }
@@ -329,8 +329,4 @@ struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
         AccountView()
     }
-}
-
-#Preview {
-    AccountView()
 }
