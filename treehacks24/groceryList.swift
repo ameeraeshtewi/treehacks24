@@ -7,7 +7,7 @@
 
 
 import SwiftUI
-//import FirebaseFirestore
+import FirebaseFirestore
 
 struct Listitem: Identifiable {
     let id = UUID()
@@ -18,7 +18,7 @@ class ListModel: ObservableObject {
     @Published var items: [Listitem] = []
 
     var username: String
-   // let db = Firestore.firestore()
+    let db = Firestore.firestore()
     
     init(username: String) {
         self.username = username
@@ -31,17 +31,17 @@ class ListModel: ObservableObject {
         
         let titlesArray = items.map { $0.title }
 
-        // Reference the document for this user in the "users" collection
-//        let userDocument = db.collection("users").document(username)
-//
-//        // Update the document with the new array of item titles
-//        userDocument.setData(["groceryList": titlesArray], merge: true) { error in
-//            if let error = error {
-//                print("Error updating document: \(error)")
-//            } else {
-//                print("Document successfully updated with new item")
-//            }
-//        }
+        Reference the document for this user in the "users" collection
+        let userDocument = db.collection("users").document(username)
+
+        //Update the document with the new array of item titles
+        userDocument.setData(["groceryList": titlesArray], merge: true) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated with new item")
+            }
+        }
         
     }
     
