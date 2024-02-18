@@ -40,5 +40,6 @@ struct InputFieldView_Previews: PreviewProvider{
     @State static var data: String = ""
     static var previews: some View {
         InputFieldView(data: $data, title: "Password")
+        
     }
 }

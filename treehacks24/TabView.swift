@@ -10,6 +10,7 @@ import SwiftUI
 struct TabViewExample: View {
     init() {
     UITabBar.appearance().backgroundColor = UIColor(Color(red: 0.2980392156862745, green: 0.33725490196078434, blue: 0.2235294117647059)
+                                        
 )
     }
     var body: some View {
@@ -18,6 +19,7 @@ struct TabViewExample: View {
                 .tabItem {
                     Text("Your List")
                     Image("list")
+                    
                 }
 //            browseTrips()
 //                .tabItem {

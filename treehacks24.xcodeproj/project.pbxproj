@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8328212B2B81C8350042E4BC /* activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328212A2B81C8350042E4BC /* activity.swift */; };
 		83A4887F2B815FB4004D6678 /* treehacks24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4887E2B815FB4004D6678 /* treehacks24App.swift */; };
 		83A488812B815FB4004D6678 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A488802B815FB4004D6678 /* ContentView.swift */; };
 		83A488832B815FB6004D6678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A488822B815FB6004D6678 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8328212A2B81C8350042E4BC /* activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activity.swift; sourceTree = "<group>"; };
 		83A4887B2B815FB4004D6678 /* treehacks24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treehacks24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A4887E2B815FB4004D6678 /* treehacks24App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = treehacks24App.swift; sourceTree = "<group>"; };
 		83A488802B815FB4004D6678 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				83A488802B815FB4004D6678 /* ContentView.swift */,
 				C0D96F5B2B816CE5002F0105 /* SignUpForm.swift */,
 				C0D96F5D2B816D28002F0105 /* LogInForm.swift */,
+				8328212A2B81C8350042E4BC /* activity.swift */,
 				C0D96F5F2B816E26002F0105 /* InputFieldView.swift */,
 				C0D96F612B8179CE002F0105 /* groceryList.swift */,
 				C0D96F652B81884D002F0105 /* TabView.swift */,
@@ -160,6 +163,7 @@
 				C0D96F602B816E26002F0105 /* InputFieldView.swift in Sources */,
 				C0D96F5C2B816CE5002F0105 /* SignUpForm.swift in Sources */,
 				C614AF3E2B81BE160044795C /* AccountView.swift in Sources */,
+				8328212B2B81C8350042E4BC /* activity.swift in Sources */,
 				C0D96F662B81884D002F0105 /* TabView.swift in Sources */,
 				83A4887F2B815FB4004D6678 /* treehacks24App.swift in Sources */,
 				C0D96F622B8179CE002F0105 /* groceryList.swift in Sources */,

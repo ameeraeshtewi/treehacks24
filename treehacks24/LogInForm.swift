@@ -29,6 +29,7 @@ struct LogInForm: View {
                                 .padding()
                         }
                         .background(Color(red: 0.2980392156862745, green: 0.33725490196078434, blue: 0.2235294117647059))
+                        .cornerRadius(15)
                         .frame(width: 200, height: 75)
                         .accentColor(Color(red: 1, green: 0.9725490196078431, blue: 0.9098039215686274))
                     }
