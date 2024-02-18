@@ -5,6 +5,7 @@
 //  Created by Alicia Bao on 2/17/24.
 //
 
+
 import SwiftUI
 
 struct Listitem: Identifiable {
@@ -32,16 +33,25 @@ struct groceryList: View {
     
     var body: some View {
         VStack {
+            Text("Grocery List")
+                .font(.system(size: 25))
+                .fontWeight(.bold)
+                .foregroundColor(Color(red: 76 / 255.0, green: 86 / 255.0, blue: 57 / 255.0))
+                .padding(.top)
             List {
                 ForEach(listModel.items) { item in
                     Text(item.title)
+                    
                 }
                 .onDelete(perform: deleteItem)
             }
             .background(Color(red: 1, green: 0.9725490196078431, blue: 0.9098039215686274))
+            .scrollContentBackground(.hidden)
             .frame(height:500)
             HStack {
                 TextField("Enter new item", text: $newItemTitle)
+                    .padding()
+                    .background(Color.white)
                 Button(action: addItem) {
                     Text("Add")
                         .padding()
