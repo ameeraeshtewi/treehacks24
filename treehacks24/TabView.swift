@@ -18,7 +18,7 @@ struct TabViewExample: View {
                     Text("Your List")
                     Image("list")
                 }
-            browseTrips()
+            browse()
                 .tabItem {
                     Text("Browse Trips")
                     Image("map")
